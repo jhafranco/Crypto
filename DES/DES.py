@@ -4,8 +4,9 @@
 #
 # Description: DES implementation in Python 3
 #
-# Note: Only single DES in ECB mode (with PKCS5 padding)
-#       is supported
+# Date: 2012-01-16
+#
+# Repository: https://github.com/jhafranco/Crypto
 #
 # License: Attribution-NonCommercial-ShareAlike 3.0 Unported
 #          (CC BY-NC-SA 3.0)

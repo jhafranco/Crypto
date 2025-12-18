@@ -1,3 +1,17 @@
+#!/usr/bin/env python3
+#
+# Author: Joao H de A Franco (jhafranco@gmail.com)
+#
+# Description: DES Python implementation validation
+#
+# Date: 2012-01-16
+#
+# Repository: https://github.com/jhafranco/Crypto
+#
+# License: Attribution-NonCommercial-ShareAlike 3.0 Unported
+#          (CC BY-NC-SA 3.0)
+#===========================================================
+
 import sys
 from DES import setKey, encryptBlock, decryptBlock, encrypt, decrypt
  

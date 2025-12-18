@@ -6,6 +6,8 @@
 #
 # Date: 2012-01-15
 #
+# Repository: https://github.com/jhafranco/Crypto
+#
 # License: Attribution-NonCommercial-ShareAlike 3.0 Unported
 #          (CC BY-NC-SA 3.0)
 #===========================================================
