@@ -6,6 +6,8 @@
 #
 # Date: 2013-06-02
 #
+# Version: 1.1
+#
 # Repository: https://github.com/jhafranco/Crypto
 #
 # License: Attribution-NonCommercial-ShareAlike 3.0 Unported
@@ -86,7 +88,7 @@ class AES:
     cipherModeTable = {"MODE_ECB":1,
                        "MODE_CBC":2}
     paddingTable = {"NoPadding":0,
-                    "PKCS5Padding":1}
+                    "PKCS7Padding":1}
     # S-Box
     sBox = (0x63,0x7c,0x77,0x7b,0xf2,0x6b,0x6f,0xc5,
             0x30,0x01,0x67,0x2b,0xfe,0xd7,0xab,0x76,
@@ -361,7 +363,7 @@ class AES:
         return self.stateToList(state)
 
     def padData(self,data):
-        """Add PKCS5 padding to plaintext (or just add bytes to fill a block)"""
+        """Add PKCS7 padding to plaintext (or just add bytes to fill a block)"""
         paddingLength = 16-(len(data)%16)
         if self.padding == "NoPadding":
             paddingLength %= 16
@@ -371,8 +373,8 @@ class AES:
             return [ord(s) for s in data]+[paddingLength]*paddingLength
 
     def unpadData(self,byteList):
-        """Remove PKCS5 padding (if present) from plaintext"""
-        if self.padding == "PKCS5Padding":
+        """Remove PKCS7 padding (if present) from plaintext"""
+        if self.padding == "PKCS7Padding":
             return "".join(chr(e) for e in byteList[:-byteList[-1]])
         else:
             return "".join(chr(e) for e in byteList)
